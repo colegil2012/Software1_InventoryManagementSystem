@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="451.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software1_project.FXMLMainController">
+   <children>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="46.0" prefHeight="344.0" prefWidth="428.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Parts">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField id="partSearchBar" fx:id="partSearchBar" layoutX="262.0" layoutY="15.0" />
+                  <Button id="partSearchBtn" fx:id="partSearchBtn" layoutX="187.0" layoutY="15.0" mnemonicParsing="false" onAction="#onPartSearchBtnClick" text="Search" />
+                  <Button id="partAddBtn" fx:id="partAddBtn" layoutX="187.0" layoutY="310.0" mnemonicParsing="false" onAction="#onPartAddBtnClick" text="Add" />
+                  <Button id="partModBtn" fx:id="partModBtn" layoutX="236.0" layoutY="310.0" mnemonicParsing="false" onAction="#onPartModBtnClick" text="Modify" />
+                  <Button id="partDelBtn" fx:id="partDelBtn" layoutX="300.0" layoutY="310.0" mnemonicParsing="false" onAction="#onPartDelBtnClick" text="Delete" />
+                  <TableView fx:id="partTable" layoutX="13.0" layoutY="86.0" prefHeight="200.0" prefWidth="400.0">
+                    <columns>
+                      <TableColumn id="partID" fx:id="partIDColumn" prefWidth="75.0" text="Part ID" />
+                      <TableColumn id="partName" fx:id="partNameColumn" prefWidth="75.0" text="Part Name" />
+                        <TableColumn id="partInvLevel" fx:id="partInvLevelColumn" prefWidth="109.0" text="Inventory Level" />
+                        <TableColumn id="partPPU" fx:id="partPPUColumn" prefWidth="140.0" text="Price/Cost Per Unit" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane layoutX="468.0" layoutY="45.0" prefHeight="344.0" prefWidth="428.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Products">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField id="productSearchBar" fx:id="productSearchBar" layoutX="255.0" layoutY="15.0" />
+                  <Button id="productSearchBtn" fx:id="productSearchBtn" layoutX="183.0" layoutY="15.0" mnemonicParsing="false" onAction="#onProductSearchBtnClick" text="Search" />
+                  <Button id="productAddBtn" fx:id="productAddBtn" layoutX="190.0" layoutY="311.0" mnemonicParsing="false" onAction="#onProductAddBtnClick" text="Add" />
+                  <Button id="productModBtn" fx:id="productModBtn" layoutX="241.0" layoutY="311.0" mnemonicParsing="false" onAction="#onProductModBtnClick" text="Modify" />
+                  <Button id="productDelBtn" fx:id="productDelButn" layoutX="303.0" layoutY="311.0" mnemonicParsing="false" onAction="#onProductDelBtnClick" text="Delete" />
+                  <TableView fx:id="productTable" layoutX="9.0" layoutY="88.0" prefHeight="200.0" prefWidth="400.0">
+                    <columns>
+                      <TableColumn fx:id="productIDColumn" prefWidth="75.0" text="Product ID" />
+                      <TableColumn fx:id="productNameColumn" prefWidth="102.0" text="Product Name" />
+                        <TableColumn fx:id="productInvLevelColumn" prefWidth="114.0" text="Inventory Level" />
+                        <TableColumn fx:id="productPPUColumn" minWidth="6.0" prefWidth="108.0" text="Price Per Unit" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="exitBtn" layoutX="830.0" layoutY="404.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
+      <Separator layoutX="448.0" layoutY="57.0" orientation="VERTICAL" prefHeight="394.0" prefWidth="11.0" />
+      <Label layoutX="315.0" layoutY="14.0" text="Inventory Management System" textFill="#58527c">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
